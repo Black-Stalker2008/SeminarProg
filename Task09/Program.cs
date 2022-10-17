@@ -8,7 +8,19 @@
 int num = new Random().Next(10, 100);
 Console.WriteLine($"Случайное число из диапозона 10 - 99 -> {num}");
 
-int firstDigit = num / 10; // 78/10 = 7
-int secondDigit = num % 10; // 78% = 8
-if(firstDigit > secondDigit) Console.WriteLine($"Наибольшая цифра числа {num} = {firstDigit}");
-else Console.WriteLine($"Наибольшая цифра числа {num} = {secondDigit}");
+// int firstDigit = num / 10; // 78/10 = 7
+// int secondDigit = num % 10; // 78% = 8
+// if (firstDigit > secondDigit) Console.WriteLine($"Наибольшая цифра числа {num} = {firstDigit}");
+// else Console.WriteLine($"Наибольшая цифра числа {num} = {secondDigit}");
+
+//int result = firstDigit > secondDigit ? firstDigit : secondDigit;
+
+int MaxDigit(int num)
+{
+    int firstDigit = num / 10; // 78/10 = 7
+    int secondDigit = num % 10; // 78% = 8
+    return firstDigit > secondDigit ? firstDigit : secondDigit;
+}
+
+int maxDigit = MaxDigit(num); //вызов метода(функции)
+Console.WriteLine($"Наибольшая цифра числа {num} = {maxDigit}");
